@@ -1,0 +1,235 @@
+/* Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0f172a;
+}
+
+header p {
+    color: #475569;
+    font-size: 1.1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 20px;
+}
+
+/* Panel Umum */
+section {
+    background: white;
+    border-radius: 16px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+}
+
+/* Input Panel */
+.parent-input {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.parent-input label {
+    font-weight: 600;
+    min-width: 160px;
+}
+
+select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 1rem;
+    background: #f8fafc;
+    cursor: pointer;
+    flex: 1;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+}
+
+#crossBtn {
+    background: #0ea5e9;
+    color: white;
+}
+
+#crossBtn:hover {
+    background: #0284c7;
+    transform: translateY(-1px);
+}
+
+#resetBtn {
+    background: #e2e8f0;
+    color: #475569;
+}
+
+#resetBtn:hover {
+    background: #cbd5e1;
+}
+
+/* Papan Punnett */
+#punnettContainer {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.punnett-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 6px;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.punnett-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    min-height: 60px;
+    min-width: 80px;
+}
+
+.header-cell {
+    background: #bae6fd;
+    color: #0369a1;
+    font-size: 1.3rem;
+}
+
+.result-cell {
+    background: #e0f2fe;
+    color: #0c4a6e;
+}
+
+/* Hasil */
+#resultContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.genotype-box {
+    background: #f8fafc;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 15px 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.genotype-box .label {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 5px;
+}
+
+.genotype-box .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.genotype-box .ratio {
+    font-size: 0.9rem;
+    color: #0ea5e9;
+    font-weight: 600;
+}
+
+/* Kuis */
+#quizQuestion {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.quiz-option {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background: #f1f5f9;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.quiz-option:hover {
+    background: #e0f2fe;
+    border-color: #38bdf8;
+}
+
+.quiz-option.correct {
+    background: #dcfce7;
+    border-color: #22c55e;
+}
+
+.quiz-option.wrong {
+    background: #fee2e2;
+    border-color: #ef4444;
+}
+
+#quizFeedback {
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.placeholder {
+    color: #94a3b8;
+    font-style: italic;
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
